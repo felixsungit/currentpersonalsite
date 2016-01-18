@@ -1,0 +1,38 @@
+$(window).load(function() {
+
+	$(document).scroll(function() {
+		leftSlideIn();
+		changeBg();
+	});
+	$( window ).resize(function() {
+		leftSlideIn();
+		changeBg();
+	});
+	function leftSlideIn(){
+		var positon = $(window).scrollTop();
+		var winWidth = $(window).width();
+		console.log(positon);
+		console.log($("#main-overlay ").height());
+		if (winWidth >= 992){
+			if (positon >= ( $("#main-overlay ").height() - 200 )){
+
+				$("#left-side").show();
+				console.log("hello");
+			}else{
+				$("#left-side").fadeOut(300);
+			}
+		}else{
+			$("#left-side").fadeOut(300);
+		}
+	}
+	function changeBg(){
+		var positon = $(window).scrollTop();
+		if ( positon >=  $("#timeline ").height() ) {
+			$("#bridge").css("background-image","url(<%= asset_path('b3.jpg') %>)");
+		}else{
+			$("#bridge").css("background-image","url(<%= asset_path('bg-mars.jpg') %>)");
+		}
+	}
+	changeBg();
+	leftSlideIn();
+});
