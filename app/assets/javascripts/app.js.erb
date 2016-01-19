@@ -5,29 +5,143 @@ $(window).ready(function() {
 		$(this).prev().slideToggle("fast");
 		$(this).toggleClass("rotate");
 	});
+	$("#burger-menu").hide();
+	$("#hamburger-btn").click(function(e){
+		
+		e.preventDefault();
+		$("#burger-menu").slideToggle("fast");
+	});
+	$("#down-arrow").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#about").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#about").offset().top
+			}, 500);
+		}
+	});
+	$(".my-site-up").click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+		  scrollTop: $("#main-overlay").offset().top
+		}, 500);
+	});
+	//menu
+	$(".about-btn").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#about").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#about").offset().top
+			}, 500);
+			$("#burger-menu").slideToggle("fast");
+		}
+	});
+	$(".skills-btn").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#skills").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#skills").offset().top
+			}, 500);
+			$("#burger-menu").slideToggle("fast");
+		}
+	});
+	$(".projects-btn").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#projects").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#projects").offset().top
+			}, 500);
+			$("#burger-menu").slideToggle("fast");
+		}
+	});
+	$(".work-btn").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#timeline").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#timeline").offset().top
+			}, 500);
+			$("#burger-menu").slideToggle("fast");
+		}
+	});
+	$(".contact-btn").click(function(e){
+		e.preventDefault();
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$('html, body').animate({
+			  scrollTop: $("#contact-page").offset().top - 55
+			}, 500);
+		}else{
+			$('html, body').animate({
+			  scrollTop: $("#contact-page").offset().top
+			}, 500);
+			$("#burger-menu").slideToggle("fast");
+		}
+	});
+
 	$(document).scroll(function() {
 		leftSlideIn();
 		changeBg();
+		headerdown();
+		changeburger();
 	});
 	$( window ).resize(function() {
 		leftSlideIn();
 		changeBg();
+		retactmenu();
+		changeburger();
 	});
 	function leftSlideIn(){
 		var positon = $(window).scrollTop();
 		var winWidth = $(window).width();
-		console.log(positon);
-		console.log($("#main-overlay ").height());
 		if (winWidth >= 992){
 			if (positon >= ( $("#main-overlay ").height() - 200 )){
 
 				$("#left-side").show();
-				console.log("hello");
 			}else{
 				$("#left-side").fadeOut(300);
 			}
 		}else{
 			$("#left-side").fadeOut(300);
+		}
+	}
+	function headerdown(){
+		var scroll = $(window).scrollTop();
+    if (scroll > 30){
+      $('#nav-cont').css("background", "#FFFFFF");
+      $('.nav-item').css("color", "#2E2633");     
+    }else{
+      $('#nav-cont').css("background", "rgba(0,0,0,0)");
+      $('.nav-item').css("color", "#FFFFFF");   
+    }
+	}
+	function retactmenu(){
+		var winWidth = $(window).width();
+		if (winWidth >= 768){
+			$("#burger-menu").fadeOut();
 		}
 	}
 	function changeBg(){
@@ -38,9 +152,19 @@ $(window).ready(function() {
 			$("#bridge").css("background-image","url(<%= asset_path('bg-mars.jpg') %>)");
 		}
 	}
+	function changeburger(){
+		var positon = $(window).scrollTop();
+		if ( positon >= $("#projects").offset().top ){
+			$(".burger-icon").css("color", "#3498db");
+		}else{
+			$(".burger-icon").css("color", "#2E2633");
+		}
+	}
 	changeBg();
 	leftSlideIn();
-
+	headerdown();
+	retactmenu();
+	changeburger();
 	
 
 

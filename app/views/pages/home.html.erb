@@ -1,50 +1,76 @@
 
 <div id="bridge"></div>
-<header>
-	<div>
-		<button class="nav-item">About</button>
-		<button class="nav-item">Skills</button>
-		<button class="nav-item">Projects</button>
-		<button class="nav-item">Work & Education</button>
 
+<header>
+	<div id="nav-cont">
+		<div id="nav-bar">
+			<button class="nav-item about-btn">About</button>
+			<button class="nav-item skills-btn">Skills</button>
+			<button class="nav-item projects-btn">Projects</button>
+			<button class="nav-item work-btn">Work & Education</button>
+			<button class="nav-item contact-btn">Contact</button>
+		</div>
+	</div>
+	<div id="hamburger">
+		<button class="nav-item" id="hamburger-btn"><i class="fa fa-bars fa-3x burger-icon"></i></button>
 	</div>
 </header>
+<div id="burger-menu">
+	<div id="menu-middle">
+		<button class="menu-item about-btn">About</button>
+		<button class="menu-item skills-btn">Skills</button>
+		<button class="menu-item projects-btn">Projects</button>
+		<button class="menu-item work-btn">Work & Education</button>
+		<button class="menu-item contact-btn">Contact</button>
+	</div>
+</div>
 
 <div id="left-side">
 	<div id="contact-side-mid">
 		<div class="contact-side-box">
-			<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-at fa-lg"></i></a>
+			<%= mail_to "jr2sun@uwaterloo.ca", class:"contact-buttons c-btn-git c-btn-sm" do %>
+				<i class="fa fa-at fa-lg"></i>
+			<% end %>
+		</div>
+
+		<div class="contact-side-box">
+			<a href="https://github.com/felixsungit" target="_blank" class="contact-buttons c-btn-git c-btn-sm "><i class="fa fa-github-alt fa-lg"></i></a>
 		</div>
 		<div class="contact-side-box">
-			<a href="www.google.com" class="contact-buttons c-btn-git c-btn-sm "><i class="fa fa-github-alt fa-lg"></i></a>
+			<a href="https://ca.linkedin.com/in/felixsunlink" target="_blank" class="contact-buttons c-btn-sm"><i class="fa fa-linkedin fa-lg"></i></a>
 		</div>
 		<div class="contact-side-box">
-			<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-linkedin fa-lg"></i></a>
+			<%= link_to 'felix_resume_web.pdf', target: '_blank', class:"contact-buttons c-btn-sm" do %>
+				 <i class="fa fa-file-pdf-o fa-lg"></i>
+			<% end %>
 		</div>
+
 	</div>
 </div>
 <div id ="main-overlay">
 	<div id="intro-box">
-		
+		<h2>Web Developer</h2>
 		<div id="intro-circle">
 		</div>
 		<div id="name-box">
 			<h1 id="name">Felix Sun</h1>
 		</div>
-		<h2 id="hello">Web Developer</h2>
+		<h2 id="hello">Portfolio & Resume</h2>
 		<div id="contact-buttons-box">
-			<a href="www.google.com" class="contact-buttons"><i class="fa fa-at fa-2x"></i></a>
-			<a href="www.google.com" class="contact-buttons c-btn-git"><i class="fa fa-github-alt fa-2x"></i></a>
-			<a href="www.google.com" class="contact-buttons"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="mailto:jr2un@uwaterloo.ca" class="contact-buttons"><i class="fa fa-at fa-2x"></i></a>
+			<a href="https://github.com/felixsungit" target="_blank" class="contact-buttons c-btn-git"><i class="fa fa-github-alt fa-2x"></i></a>
+			<a href="https://ca.linkedin.com/in/felixsunlink" target="_blank" class="contact-buttons"><i class="fa fa-linkedin fa-2x"></i></a>
+			<%= link_to 'felix_resume_web.pdf', target: '_blank', class:"contact-buttons" do %>
+				  <i class="fa fa-file-pdf-o fa-2x"></i>
+			<% end %>
 		</div>
-
-		<!-- <h2 id="hello">Computer Engineering Student</h2> -->
-		<!-- <h3>Fullstack Web Developer</h3><h3>Computer Engineering Student</h3> -->
 	</div>
 
-	<button id="down-arrow"><div class="icon icon-Mouse"></div></button>
+	<button id="down-arrow"><h3>Scroll</h3><div class="icon icon-Mouse"></div></button>
 </div>
+
 <%= render 'about' %>
 <%= render 'projects' %>
 <%= render 'timeline' %>
+<%= render 'contact' %>
 
