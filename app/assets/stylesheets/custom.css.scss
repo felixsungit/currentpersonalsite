@@ -430,6 +430,12 @@ header{
 .about-row{
   
 }
+.contact-link{
+	color: #99173C;
+	&:hover{
+		color: $orange;
+	}
+}
 
 #profile{
   background-color: $dark;
@@ -625,7 +631,7 @@ header{
   }
 }
 .more-info{
-  min-height: 180px;
+  min-height: 200px;
   display: inline-block;
   width: 100%;
   background-color: $clouds;

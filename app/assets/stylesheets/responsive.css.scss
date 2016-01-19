@@ -99,8 +99,9 @@ $green: #27ae60;
 	//about{
 	#about-me{
 		text-align: left;
-		padding-bottom: 60px;
-		padding-right: 60px;
+		padding-bottom: 80px;
+		padding-right: 40px;
+		height: 856px;
 		h2{
 			color: #2E2E2E;
 	    border: 3px solid #2E2E2E;
@@ -116,8 +117,9 @@ $green: #27ae60;
 
 	#profile{
 		text-align: left;
-		padding-left: 60px;
-		padding-bottom: 188px;
+		padding-left: 40px;
+		// padding-bottom: 188px;
+		height: 856px;
 		h2{
 			color: $lighter-blue;
 	    border: 3px solid $lighter-blue;
@@ -187,7 +189,7 @@ $green: #27ae60;
 	#contact-page{
 		text-align: left;
 	  h2{
-	    margin: 0 0 40px 0;
+	    margin: 0 0 60px 0;
 	    padding: 15px;
 	    
 	    display: inline-block;
@@ -203,11 +205,10 @@ $green: #27ae60;
 @media screen and (min-width: 992px){
 	#name{
 	  font-size: 6em;		
-		// padding: 10px 45px;
+
 	}
 	.job-title{
-	  // width: 30%;
-	  // margin: 0 0 0 10%;
+
 	  text-align: left;
 	  vertical-align: top;
 	  h3{
@@ -219,8 +220,7 @@ $green: #27ae60;
 	  
 	}
 	.job-description{
-	  // width: 47%;
-	  // margin: 0 10% 0 3%;
+
 	}
 	.job-time{
 	  font-size: 1.05em;
@@ -231,11 +231,13 @@ $green: #27ae60;
 	//about{
 	#about-me{
 		padding-bottom: 80px;
-		padding-right: 80px;
+		padding-right: 60px;
+		height: 732px;
 	}
 	#profile{
-		padding-bottom: 182px;
-		padding-right: 80px;
+		// padding-bottom: 182px;
+		padding-right: 60px;
+		height: 732px;
 	}
 	//projects
 	.web-description{
@@ -252,8 +254,21 @@ $green: #27ae60;
 	}
 	//about{
 	#profile{
-		padding-bottom: 85px;
+		padding-bottom: 80px;
+		padding-left: 80px;
+	}
+	#about-me{
+		padding-bottom: 80px;
+		padding-right: 80px;
 	}
 
 
+}
+@media screen and (min-width: 1500px){
+	#profile{
+		height: 632px
+	}
+	#about-me{
+		height: 632px
+	}
 }
