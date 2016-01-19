@@ -1,60 +1,50 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	  <title>Playerbase</title>
-	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	  <%= csrf_meta_tags %>
-	  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Passion+One:400,700|Raleway|Comfortaa|Poiret+One|Dancing+Script' rel='stylesheet' type='text/css'>
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	</head>
 
-	<body>
-		<div id="bridge"></div>
-		<header>
-			<div>
-				<button class="nav-item">About</button>
-				<button class="nav-item">Skills</button>
-				<button class="nav-item">Projects</button>
-				<button class="nav-item">Work & Education</button>
-			</div>
-		</header>
+<div id="bridge"></div>
+<header>
+	<div>
+		<button class="nav-item">About</button>
+		<button class="nav-item">Skills</button>
+		<button class="nav-item">Projects</button>
+		<button class="nav-item">Work & Education</button>
+
+	</div>
+</header>
+
+<div id="left-side">
+	<div id="contact-side-mid">
+		<div class="contact-side-box">
+			<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-at fa-lg"></i></a>
+		</div>
+		<div class="contact-side-box">
+			<a href="www.google.com" class="contact-buttons c-btn-git c-btn-sm "><i class="fa fa-github-alt fa-lg"></i></a>
+		</div>
+		<div class="contact-side-box">
+			<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-linkedin fa-lg"></i></a>
+		</div>
+	</div>
+</div>
+<div id ="main-overlay">
+	<div id="intro-box">
 		
-		<div id="left-side">
-			<div id="contact-side-mid">
-				<div class="contact-side-box">
-					<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-at fa-lg"></i></a>
-				</div>
-				<div class="contact-side-box">
-					<a href="www.google.com" class="contact-buttons c-btn-git c-btn-sm "><i class="fa fa-github-alt fa-lg"></i></a>
-				</div>
-				<div class="contact-side-box">
-					<a href="www.google.com" class="contact-buttons c-btn-sm"><i class="fa fa-linkedin fa-lg"></i></a>
-				</div>
-			</div>
+		<div id="intro-circle">
 		</div>
-		<div id ="main-overlay">
-			<div id="intro-box">
-				
-				<div id="intro-circle">
-				</div>
-				<div id="name-box">
-					<h1 id="name">Felix Sun</h1>
-				</div>
-				<h2 id="hello">Web Developer</h2>
-				<div id="contact-buttons-box">
-					<a href="www.google.com" class="contact-buttons"><i class="fa fa-at fa-2x"></i></a>
-					<a href="www.google.com" class="contact-buttons c-btn-git"><i class="fa fa-github-alt fa-2x"></i></a>
-					<a href="www.google.com" class="contact-buttons"><i class="fa fa-linkedin fa-2x"></i></a>
-				</div>
+		<div id="name-box">
+			<h1 id="name">Felix Sun</h1>
+		</div>
+		<h2 id="hello">Web Developer</h2>
+		<div id="contact-buttons-box">
+			<a href="www.google.com" class="contact-buttons"><i class="fa fa-at fa-2x"></i></a>
+			<a href="www.google.com" class="contact-buttons c-btn-git"><i class="fa fa-github-alt fa-2x"></i></a>
+			<a href="www.google.com" class="contact-buttons"><i class="fa fa-linkedin fa-2x"></i></a>
+		</div>
 
-				<!-- <h2 id="hello">Computer Engineering Student</h2> -->
-				<!-- <h3>Fullstack Web Developer</h3><h3>Computer Engineering Student</h3> -->
-			</div>
-			
-			<button id="down-arrow"><div class="icon icon-Mouse"></div></button>
-		</div>
-		<%= render 'about' %>
-		<%= render 'timeline' %>
-	</body>
-</html>
+		<!-- <h2 id="hello">Computer Engineering Student</h2> -->
+		<!-- <h3>Fullstack Web Developer</h3><h3>Computer Engineering Student</h3> -->
+	</div>
+
+	<button id="down-arrow"><div class="icon icon-Mouse"></div></button>
+</div>
+<%= render 'about' %>
+<%= render 'projects' %>
+<%= render 'timeline' %>
+

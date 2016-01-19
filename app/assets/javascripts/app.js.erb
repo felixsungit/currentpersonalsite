@@ -1,5 +1,10 @@
-$(window).load(function() {
-
+$(window).ready(function() {
+	
+	$(".more-info-btn").click(function(e){
+		e.preventDefault();
+		$(this).prev().slideToggle("fast");
+		$(this).toggleClass("rotate");
+	});
 	$(document).scroll(function() {
 		leftSlideIn();
 		changeBg();
@@ -35,4 +40,11 @@ $(window).load(function() {
 	}
 	changeBg();
 	leftSlideIn();
+
+	
+
+
+
+
 });
+
