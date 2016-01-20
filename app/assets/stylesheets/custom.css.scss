@@ -203,7 +203,7 @@ header{
 }
 #bridge {
   position: fixed; 
-  background-image: url("bg-mars.jpg");
+  background-image: asset-url("bg-mars.jpg");
   background-repeat: no-repeat;
   width: 100%;
   overflow: hidden;
