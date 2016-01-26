@@ -609,6 +609,7 @@ header{
   width: 100%;
 }
 .more-info-btn{
+
   background-color: $green;
   border: none;
   outline: none;
@@ -629,6 +630,7 @@ header{
     position: relative;
     bottom: 20px;
   }
+  display: none;
 }
 .more-info{
   min-height: 200px;
@@ -636,6 +638,7 @@ header{
   width: 100%;
   background-color: $clouds;
   padding: 0 20px 0 20px;
+  margin-bottom: 80px;
 
   h3{
     color: $dark;
